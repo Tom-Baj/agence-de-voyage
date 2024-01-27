@@ -18,7 +18,12 @@ body {
   justify-content: center;
 }
 
-/***** Header *****/
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/*****  Header  *****/
 
 header {
   margin: 0;
@@ -29,12 +34,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10px;
 }
 
 .logo {
   width: auto;
-  height: 20px;
+  height: 16px;
 }
 
 .liste-liens {
@@ -51,11 +55,30 @@ header {
   border-top: #0065fc 2px solid;
 }
 
+/*****  Main  *****/
+
 .main-container {
   width: 100%;
   max-width: 1440px;
   padding: 0 50px;
   box-sizing: border-box;
+}
+
+.description {
+  line-height: 15px;
+  margin: 30px 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+.icon-localisation {
+  background-color: var(--main-bg-color);
+  padding: 8px;
+  border-radius: 15px 0 0 15px;
+  border: 1px var(--main-bg-color);
 }
 
 a {
@@ -193,5 +216,8 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-  /* ... */
+  .liste-liens .lien:hover {
+    color: var(--main-color);
+    border-bottom: #0065fc 2px solid;
+  }
 }
