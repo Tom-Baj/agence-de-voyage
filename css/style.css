@@ -20,7 +20,7 @@ body {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 1.4em;
   font-weight: 700;
 }
 
@@ -126,16 +126,23 @@ header {
 
 .filtres {
   display: flex;
+  align-items: center;
+}
+
+.filtres p {
+  font-size: 1em;
+  font-weight: 700;
 }
 
 .bouton-filtre {
-  font-size: 16px;
+  font-size: 1em;
   background-color: white;
   border: 2px solid var(--border-color);
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 8px 15px;
   margin: 10px;
   font-weight: 700;
+  text-align: center;
 }
 
 .bouton-filtre:hover {
@@ -143,7 +150,8 @@ header {
 }
 
 .icon-filtre {
-  margin: 5px 10px 5px 5px;
+  font-size: 1.3em;
+  margin: 5px 10px 5px 0;
 }
 
 /* Zone Infos */
@@ -156,13 +164,15 @@ header {
 
 .infos i {
   text-align: center;
-  margin-right: 4px;
-  font-size: 0.7em;
+  margin-right: 7px;
+  font-size: 0.9em;
   padding: 5px;
   width: 1em;
   border: 1px solid var(--border-color);
   border-radius: 50%;
 }
+
+/* Cards */
 
 a {
   color: inherit;
@@ -350,11 +360,11 @@ footer {
   display: flex;
   width: 34%;
   flex-direction: column;
-  margin: 20px 0 0 20px;
+  margin: 20px 0 20px 20px;
 }
 
 .footer-title {
-  font-size: 16px;
+  font-size: 1.1em;
   font-weight: 700;
   margin: 0;
 }
@@ -364,8 +374,11 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+  /* Filtres */
+
   .filtres {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .bouton-filtres-container {
@@ -377,6 +390,8 @@ footer {
     align-items: center;
   }
 
+  /* Hebergements */
+
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -384,6 +399,8 @@ footer {
   .hebergements {
     width: 100%;
   }
+
+  /* Populaires */
 
   .populaires {
     width: 100%;
@@ -408,6 +425,8 @@ footer {
     font-size: 13px;
   }
 
+  /* Activites */
+
   .activites-cards img {
     height: 200px;
   }
@@ -416,14 +435,14 @@ footer {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   .main-container {
-    padding: 30px 0;
-  }
-
-  main {
-    margin: 0 30px;
+    padding: 0;
   }
 
   /* HEADER */
+
+  header {
+    padding-top: 30px;
+  }
 
   .en-tete {
     flex-direction: column;
@@ -462,6 +481,10 @@ footer {
 
   /* Zone Recherche */
 
+  .zone-recherche {
+    padding: 0 15px;
+  }
+
   .groupe-form {
     width: 100%;
   }
@@ -473,6 +496,7 @@ footer {
   .zone-button {
     border-radius: 15px 16px;
     padding: 15px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
   .recherche-button {
@@ -485,7 +509,103 @@ footer {
     border-radius: 15px;
   }
 
+  /* Filtre */
+
+  .filtres {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .bouton-filtres-container {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .bouton-filtre {
+    margin: 2px;
+    width: 48%;
+    margin-bottom: 10px;
+  }
+
+  /* Hebergement and Populaire */
+
+  .hebergements-and-populaires {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .hebergements-and-populaires section {
+    border-radius: 0;
+  }
+
+  /* Populaires */
+
+  .populaires-cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .populaires-cards .card {
+    margin-top: 20px;
+  }
+
+  .populaires-cards a {
+    width: 100%;
+  }
+
+  /* Hebergements */
+
+  #hebergements {
+    background-color: white;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hebergements-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hebergements a {
+    width: 100%;
+  }
+
+  .hebergements-cards .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Activites */
+
+  #activites {
+    width: 100%;
+  }
+
+  .activites-cards {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .activites-cards .card {
+    width: auto;
+    margin: 10px;
+  }
+
+  .activites-cards img {
+    height: 141px;
+    width: 100%;
+  }
+
+  /* Footer */
+
+  .pied-de-page {
+    flex-direction: column;
+  }
+
+  .container-footer {
+    width: 100%;
+    padding: 10px 0;
   }
 }
